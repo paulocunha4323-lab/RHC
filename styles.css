@@ -1,0 +1,56 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h1, h2, h3 {
+  color: #FF0000;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.button {
+  background-color: #FF0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.button:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('parallax-background.png');
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
